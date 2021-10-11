@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">assignment1</string>
+    <string-array name="products">
+        <item>Sponge Cake</item>
+        <item>Chocolate Cake</item>
+        <item>Donuts</item>
+    </string-array>
 </resources>
