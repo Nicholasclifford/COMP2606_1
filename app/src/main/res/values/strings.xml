@@ -5,4 +5,6 @@
         <item>Chocolate Cake</item>
         <item>Donuts</item>
     </string-array>
+    <string name="message">Please select image to start order</string>
+    <string name="button">Display orders</string>
 </resources>
