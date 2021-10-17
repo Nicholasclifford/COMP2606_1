@@ -11,5 +11,44 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/donuttop" />
+        android:layout_marginTop="16dp"
+        android:text="@string/product_top" />
+
+    <RadioGroup android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton android:id="@+id/radio1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radioText1" />
+
+        <RadioButton android:id="@+id/radio2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radioText2" />
+
+        <RadioButton android:id="@+id/radio3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/radioText3" />
+
+    </RadioGroup>
+
+    <CheckBox android:id="@+id/icing"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="icing" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/cart" />
+
 </LinearLayout>

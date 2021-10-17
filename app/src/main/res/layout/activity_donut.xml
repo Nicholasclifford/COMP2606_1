@@ -12,5 +12,5 @@
         android:id="@+id/dounttop"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/donuttop" />
+        android:text="@string/product_top" />
 </LinearLayout>

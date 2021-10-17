@@ -5,6 +5,10 @@
     <string name="button">Display orders</string>
     <string name="cake">This is a picture of a cake</string>
     <string name="title_activity_displayorders">displayorders</string>
-    <string name="donuttop">Select options</string>
+    <string name="product_top">Please select the following options</string>
+    <string name="radioText1">10 inch</string>
+    <string name="radioText2">8 inch</string>
+    <string name="radioText3">cupcake</string>
+    <string name="cart">Add to cart</string>
 
 </resources>
