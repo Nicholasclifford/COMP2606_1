@@ -1,10 +1,10 @@
 <resources>
     <string name="app_name">assignment1</string>
-    <string-array name="products">
-        <item>Sponge Cake</item>
-        <item>Chocolate Cake</item>
-        <item>Donuts</item>
-    </string-array>
+
     <string name="message">Please select image to start order</string>
     <string name="button">Display orders</string>
+    <string name="cake">This is a picture of a cake</string>
+    <string name="title_activity_displayorders">displayorders</string>
+    <string name="donuttop">Select options</string>
+
 </resources>
