@@ -34,6 +34,8 @@ public class chocolatecake extends AppCompatActivity {
         }
         else{
             RadioButton radioButton = findViewById(id);
+            String radio_text = radioButton.getText().toString();
+            product.setVolume(radio_text);
         }
 
     }
