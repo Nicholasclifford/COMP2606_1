@@ -92,7 +92,6 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:onClick="send_order"
-        android:paddingTop="15dp"
         android:text="@string/cart" />
 
 

@@ -18,11 +18,11 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton donutbutton=(ImageButton) findViewById(R.id.imageButton);
-        // ImageButton spongecake=(ImageButton) findViewById(R.id.imageButton2);
-        // ImageButton chocolate_cake=(ImageButton) findViewById(R.id.imageButton);
+        ImageButton donut_button=(ImageButton) findViewById(R.id.imageButton);
+        ImageButton sponge_cake=(ImageButton) findViewById(R.id.imageButton2);
+        ImageButton chocolate_cake=(ImageButton) findViewById(R.id.chocolate_Button);
 
-        donutbutton.setOnClickListener(new View.OnClickListener() {
+        donut_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MainActivity.this, donut.class);
@@ -30,22 +30,22 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-   /*     spongecake.setOnClickListener(new View.OnClickListener() {
+        sponge_cake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)
             {
                 Intent intent3=new Intent(MainActivity.this,spongecake.class);
                 startActivity(intent3);
             }});
-*/
-    /*    chocolate_cake.setOnClickListener(new View.OnClickListener() {
+
+        chocolate_cake.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent4=new Intent(MainActivity.this,chocolatecake.class);
                 startActivity(intent4);
             }
         });
-*/
+
     }
 
     public void DisplayOrders(View view) {
