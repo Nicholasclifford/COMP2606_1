@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+import android.widget.Switch;
 import android.widget.Toast;
 
 import java.util.ArrayList;
@@ -17,6 +18,7 @@ public class donut extends AppCompatActivity {
 
     public RadioGroup size;
     public RadioGroup type;
+    public Switch filling;
     ArrayList<String> donut_size;
     HashSet<String> donut_type;
     ArrayList<String> order = new ArrayList<String>();
@@ -55,15 +57,13 @@ public class donut extends AppCompatActivity {
 
         size=(RadioGroup) findViewById(R.id.donutamount);
         type=(RadioGroup) findViewById(R.id.donut_type);
+        filling=(Switch) findViewById(R.id.switch1);
 
-        if (order.isEmpty()) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Nothing was selected...", Toast.LENGTH_LONG);
-            toast.show();
-        }
+
 
 
         if (size.getCheckedRadioButtonId() == -1 || type.getCheckedRadioButtonId() == -1) {
-            Toast toast = Toast.makeText(getApplicationContext(), "Both fields must be clicked", Toast.LENGTH_LONG);
+            Toast toast = Toast.makeText(getApplicationContext(), "Both fields must be clicked", Toast.LENGTH_SHORT);
             toast.show();
         }
         else
@@ -74,7 +74,15 @@ public class donut extends AppCompatActivity {
             b = (Button) findViewById(type.getCheckedRadioButtonId());
             order.add(b.getText().toString());
 
+            if(filling.isChecked())
+            {
+                order.add("Fill donuts with cream");
+            }
 
+                if (order.isEmpty()) {
+                    Toast toast = Toast.makeText(getApplicationContext(), "Nothing was selected...", Toast.LENGTH_LONG);
+                    toast.show();
+                }
 
              Intent intent2 = new Intent(this, Confirmorder.class);
               intent2.putStringArrayListExtra("list", order);

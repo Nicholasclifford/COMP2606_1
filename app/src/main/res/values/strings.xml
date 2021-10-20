@@ -18,4 +18,6 @@
     <string name="dountoption3">icing</string>
     <string name="dountoptionheader">Select type:</string>
     <string name="confirm">Confirm order</string>
+    <string name="donutswitch">Fill with Cream</string>
+    <string name="switch_on">YES</string>
 </resources>
