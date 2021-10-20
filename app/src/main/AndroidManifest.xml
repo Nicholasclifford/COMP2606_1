@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Assignment1">
         <activity
+            android:name=".Confirmorder"
+            android:exported="false" />
+        <activity
             android:name=".chocolatecake"
             android:exported="false" />
         <activity

@@ -13,4 +13,83 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/product_top" />
+
+    <TextView
+        android:id="@+id/donutsizetext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/donutsize" />
+
+    <RadioGroup
+        android:id="@+id/donutamount"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dountsize1"
+            android:layout_weight="1"
+            android:id="@+id/sizeoption1"
+            />
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/dountsize2"
+            android:id="@+id/sizeoption2"
+            />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dountoptionheader" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/donut_type">
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dountoption"
+            android:layout_weight="1"
+            android:id="@+id/typeoption1"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dountoption1"
+            android:layout_weight="1"
+            android:id="@+id/typeoption2"/>
+
+        <RadioButton
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/dountoption3"
+            android:layout_weight="1"
+            android:id="@+id/typeoption3"/>
+
+
+    </RadioGroup>
+
+    <Button
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/cart"
+        android:paddingTop="15dp"
+        android:onClick="send_order"/>
+
+
+
+
 </LinearLayout>

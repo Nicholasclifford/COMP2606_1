@@ -10,5 +10,12 @@
     <string name="radioText2">8 inch</string>
     <string name="radioText3">cupcake</string>
     <string name="cart">Add to cart</string>
-
+    <string name="donutsize">Select amount:</string>
+    <string name="dountsize1">6</string>
+    <string name="dountsize2">12</string>
+    <string name="dountoption">plain</string>
+    <string name="dountoption1">sugar</string>
+    <string name="dountoption3">icing</string>
+    <string name="dountoptionheader">Select type:</string>
+    <string name="confirm">Confirm order</string>
 </resources>

@@ -9,6 +9,7 @@ import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class chocolatecake extends AppCompatActivity {
 
@@ -31,6 +32,9 @@ public class chocolatecake extends AppCompatActivity {
         if (id == -1){
             TextView textView = (TextView) findViewById(R.id.textView3);
             textView.setText("Please finish the form!");
+            Toast toast = Toast.makeText(getApplicationContext(), "Please select a type of cake", Toast.LENGTH_LONG);
+            toast.show();
+
         }
         else{
             RadioButton radioButton = findViewById(id);
