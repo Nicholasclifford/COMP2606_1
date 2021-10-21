@@ -42,7 +42,8 @@
     <CheckBox android:id="@+id/icing"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="icing" />
+        android:text="icing"
+        android:onClick="onCheckboxClicked"/>
 
     <Button
         android:id="@+id/button2"
