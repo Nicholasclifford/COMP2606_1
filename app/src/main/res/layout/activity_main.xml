@@ -32,8 +32,8 @@
 
         <ImageButton
             android:id="@+id/chocolate_Button"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:adjustViewBounds="true"
@@ -43,8 +43,8 @@
 
         <ImageButton
             android:id="@+id/imageButton2"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="20dp"
             android:adjustViewBounds="true"
@@ -54,8 +54,8 @@
 
 
        <ImageButton
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
             android:src="@drawable/donut"
             android:id="@+id/imageButton"
             android:layout_marginTop="20dp"
