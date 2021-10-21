@@ -9,14 +9,13 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class chocolatecake extends AppCompatActivity {
 
-    ArrayList<String> mylist=new ArrayList<String>();
+    ArrayList<String> mylist= new ArrayList<>();
 
 
     @Override

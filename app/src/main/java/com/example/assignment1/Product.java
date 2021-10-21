@@ -1,6 +1,8 @@
 package com.example.assignment1;
 
-public class Product {
+import java.io.Serializable;
+
+public class Product implements Serializable {
 
     private String volume;
     boolean icing;

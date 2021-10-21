@@ -18,10 +18,10 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton donut_button=(ImageButton) findViewById(R.id.imageButton);
-        ImageButton sponge_cake=(ImageButton) findViewById(R.id.imageButton2);
+     //   ImageButton donut_button=(ImageButton) findViewById(R.id.imageButton);
+       // ImageButton sponge_cake=(ImageButton) findViewById(R.id.imageButton2);
         ImageButton chocolate_cake=(ImageButton) findViewById(R.id.chocolate_Button);
-
+/*
         donut_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
             {
                 Intent intent3=new Intent(MainActivity.this,spongecake.class);
                 startActivity(intent3);
-            }});
+            }});*/
 
         chocolate_cake.setOnClickListener(new View.OnClickListener() {
             @Override
