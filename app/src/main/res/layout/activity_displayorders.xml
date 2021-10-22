@@ -7,10 +7,9 @@
     tools:context=".displayorders">
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/order_screen"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="TextView"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

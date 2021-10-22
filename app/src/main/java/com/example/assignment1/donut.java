@@ -24,6 +24,8 @@ public class donut extends AppCompatActivity {
     ArrayList<String> order = new ArrayList<String>();
 
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -68,7 +70,11 @@ public class donut extends AppCompatActivity {
         }
         else
             {
+
+
                 order.add("Donut");
+
+
             Button b = (Button) findViewById(size.getCheckedRadioButtonId());
             order.add(b.getText().toString());
             b = (Button) findViewById(type.getCheckedRadioButtonId());

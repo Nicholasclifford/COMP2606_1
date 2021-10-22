@@ -10,15 +10,15 @@ import android.widget.ImageButton;
 public class MainActivity extends AppCompatActivity {
 
     ImageButton donutbutton;
-    //  ImageButton spongecake;
-    //ImageButton chocolate_cake;
+     ImageButton spongecake;
+    ImageButton chocolate_cake;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ImageButton donut_button=(ImageButton) findViewById(R.id.imageButton);
+       ImageButton donut_button=(ImageButton) findViewById(R.id.imageButton);
         ImageButton sponge_cake=(ImageButton) findViewById(R.id.imageButton2);
         ImageButton chocolate_cake=(ImageButton) findViewById(R.id.chocolate_Button);
 

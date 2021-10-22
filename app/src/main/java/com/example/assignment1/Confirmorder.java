@@ -3,12 +3,12 @@ package com.example.assignment1;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-
 import java.util.ArrayList;
-import java.util.HashSet;
+
 
 public class Confirmorder extends AppCompatActivity {
 
@@ -26,6 +26,13 @@ public class Confirmorder extends AppCompatActivity {
             display.append(s);
             display.append("\n");
         }
+        SharedPreferences order=getSharedPreferences("order_list",MODE_PRIVATE);
+        String s=display.getText().toString();
+        SharedPreferences.Editor edit= order.edit();
+        edit.putString("order",s);
+        edit.commit();
+
+
     }
 
 
@@ -39,5 +46,10 @@ public class Confirmorder extends AppCompatActivity {
         whatsapp.setPackage("com.whatsapp");
         startActivity(whatsapp);
 
+    }
+
+    public void Home(View view) {
+        Intent intent3=new Intent(this,MainActivity.class);
+        startActivity(intent3);
     }
 }
