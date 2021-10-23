@@ -43,6 +43,15 @@ public class spongecake extends AppCompatActivity {
 
     public void onclickAddToCart(View view)
     {
+
+        CheckBox checkbox = (CheckBox) findViewById(R.id.icing);
+        String checkboxText = "";
+        String radioText = "";
+        boolean checked = checkbox.isChecked();
+        if(checked){
+            checkboxText = checkbox.getText().toString();
+        }
+
         type=(RadioGroup) findViewById(R.id.radio_group);
 
 
@@ -56,6 +65,11 @@ public class spongecake extends AppCompatActivity {
             mylist.add(0,"Sponge cake");
             Button b = (Button) findViewById(type.getCheckedRadioButtonId());
             mylist.add(b.getText().toString());
+            radioText = b.getText().toString();
+
+            Product product = new Product("Sponge Cake", radioText, checkboxText);
+            FileEditor.writeToFile(getApplicationContext(), product);
+
             Intent intent = new Intent(this, Confirmorder.class);
             intent.putStringArrayListExtra("list",mylist);
             startActivity(intent);

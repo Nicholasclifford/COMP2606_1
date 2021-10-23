@@ -77,6 +77,9 @@ public class chocolatecake extends AppCompatActivity {
 
         }
 
+    }
+
+    public void onclickConfirmOrder(View view){
 
     }
 }
