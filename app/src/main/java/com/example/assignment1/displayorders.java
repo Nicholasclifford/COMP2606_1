@@ -29,7 +29,20 @@ public class displayorders<d> extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_displayorders);
 
-        Intent intent=getIntent();}
+        Intent intent=getIntent();
+        onLoad();
+    }
+
+        public void onLoad(){
+            Context context = getApplicationContext();
+            Product product = (Product) FileEditor.readObjectFromFile(getApplicationContext());
+
+            TextView textView = (TextView) findViewById(R.id.order_screen);
+
+            textView.setText(product.getVolume());
+        }
+
+
 
  /*       try {
             infile();
@@ -88,6 +101,5 @@ public class displayorders<d> extends AppCompatActivity {
             e.printStackTrace();
         }
     }*/
-    Context context = getApplicationContext();
 
 }

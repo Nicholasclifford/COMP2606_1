@@ -68,9 +68,8 @@ public class chocolatecake extends AppCompatActivity {
             mylist.add(b.getText().toString());
             radioText = b.getText().toString();
 
-            Product product = new Product("Chocolate Cake", checkboxText, radioText);
-            Context context = getApplicationContext();
-            FileEditor.writeToFile(context, product);
+            Product product = new Product("Chocolate Cake", radioText, checkboxText);
+            FileEditor.writeToFile(getApplicationContext(), product);
 
             Intent intent = new Intent(this, Confirmorder.class);
             intent.putStringArrayListExtra("list",mylist);
