@@ -77,8 +77,12 @@ public class donut extends AppCompatActivity {
 
             Button b = (Button) findViewById(size.getCheckedRadioButtonId());
             order.add(b.getText().toString());
-            b = (Button) findViewById(type.getCheckedRadioButtonId());
-            order.add(b.getText().toString());
+            Button f = (Button) findViewById(type.getCheckedRadioButtonId());
+            order.add(f.getText().toString());
+
+                String radioText = b.getText().toString();
+                String d=f.getText().toString();
+            Product product=new Product("donut",radioText,d);
 
             if(filling.isChecked())
             {

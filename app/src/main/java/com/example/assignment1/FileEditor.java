@@ -3,14 +3,18 @@ package com.example.assignment1;
 import android.app.Activity;
 import android.content.Context;
 
+import java.io.BufferedInputStream;
 import java.io.DataOutputStream;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.OutputStreamWriter;
 import java.io.Serializable;
+import java.io.UnsupportedEncodingException;
 
 public class FileEditor implements Serializable {
 
@@ -66,4 +70,15 @@ public class FileEditor implements Serializable {
 
         return object;
     }
+
+    public static void read(String []args)
+    {
+
+
+    }
+
+    public static void write(String output) {
+       
+    }
+
 }

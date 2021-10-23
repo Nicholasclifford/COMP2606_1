@@ -10,12 +10,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 
 public class displayorders<d> extends AppCompatActivity {
@@ -23,6 +25,7 @@ public class displayorders<d> extends AppCompatActivity {
     TextView display;
     String order_list;
     private DataOutputStream read;
+    String p;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,6 +34,17 @@ public class displayorders<d> extends AppCompatActivity {
 
         Intent intent=getIntent();
         onLoad();
+
+
+        SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
+        order_list=file.getString("order","");
+        display=(TextView) findViewById(R.id.order_screen);
+        display.append(order_list);
+        SharedPreferences.Editor info= file.edit();
+        info.clear();
+        info.commit();
+
+
     }
 
         public void onLoad(){
@@ -44,22 +58,12 @@ public class displayorders<d> extends AppCompatActivity {
 
 
 
- /*       try {
-            infile();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
 
-        SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
-    order_list=file.getString("order","");
-    display=(TextView) findViewById(R.id.order_screen);
-    display.append(order_list);
-    SharedPreferences.Editor info= file.edit();
-    info.clear();
-    info.commit();
+
+
 
 }
-
+/*
     public void outfile() throws IOException {
         FileOutputStream fos = null;
         try {
@@ -102,4 +106,3 @@ public class displayorders<d> extends AppCompatActivity {
         }
     }*/
 
-}
