@@ -2,6 +2,7 @@ package com.example.assignment1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -41,10 +42,13 @@ public class chocolatecake extends AppCompatActivity {
     }
 
     public void onclickAddToCart(View view){
-        Product product = new Product();
         CheckBox checkbox = (CheckBox) findViewById(R.id.icing);
+        String checkboxText = "";
+        String radioText = "";
         boolean checked = checkbox.isChecked();
-        product.setIcing(checked);
+        if(checked){
+            checkboxText = checkbox.getText().toString();
+        }
         //RadioButton radioButton = (RadioButton) findViewById(R.id)
         RadioGroup radioGroup = (RadioGroup) findViewById((R.id.radio_group));
         int id = radioGroup.getCheckedRadioButtonId();
@@ -62,11 +66,18 @@ public class chocolatecake extends AppCompatActivity {
             mylist.add(0,"Chocolate cake");
             Button b = (Button) findViewById(radioGroup.getCheckedRadioButtonId());
             mylist.add(b.getText().toString());
+            radioText = b.getText().toString();
+
+            Product product = new Product("Chocolate Cake", checkboxText, radioText);
+            Context context = getApplicationContext();
+            FileEditor.writeToFile(context, product);
+
             Intent intent = new Intent(this, Confirmorder.class);
             intent.putStringArrayListExtra("list",mylist);
             startActivity(intent);
 
         }
+
 
     }
 }

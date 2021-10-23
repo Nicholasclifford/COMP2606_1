@@ -88,4 +88,6 @@ public class displayorders<d> extends AppCompatActivity {
             e.printStackTrace();
         }
     }*/
+    Context context = getApplicationContext();
+
 }

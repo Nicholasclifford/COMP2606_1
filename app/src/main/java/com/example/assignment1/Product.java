@@ -15,10 +15,14 @@ public class Product implements Serializable {
 
     private String name;
     private String volume;
-    boolean icing;
+    private String icing;
     ArrayList<String> additions;
 
-
+    public Product(String name, String volume, String icing) {
+        this.name = name;
+        this.volume = volume;
+        this.icing = icing;
+    }
 
     public String getName() {
         return name;
@@ -32,7 +36,7 @@ public class Product implements Serializable {
         this.volume = volume;
     }
 
-    public void setIcing(boolean icing) {
+    public void setIcing(String icing) {
         this.icing = icing;
     }
 
@@ -40,7 +44,7 @@ public class Product implements Serializable {
         return volume;
     }
 
-    public boolean isIcing() {
+    public String isIcing() {
         return icing;
     }
 
@@ -52,13 +56,5 @@ public class Product implements Serializable {
         additions.add(d);
     }
 
-    public static void writeFile() throws IOException {
-        ObjectOutputStream fout= new ObjectOutputStream(new FileOutputStream("Orders.bin"));
-    }
-
-    public static void readFile()
-    {
-
-    }
 
 }
