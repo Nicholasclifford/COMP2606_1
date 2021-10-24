@@ -28,20 +28,20 @@ public class chocolatecake extends AppCompatActivity {
         Intent intent=getIntent();
     }
 
-    public void onCheckboxClicked(View view)
-    {
-        CheckBox item =((CheckBox)view);
-        boolean v=item.isChecked();
-        String option=item.getText().toString();
-        if(v)
-        {
-            mylist.add(option);
-        }
-        else{
-            mylist.remove(option);
-        }
-
-    }
+//    public void onCheckboxClicked(View view)
+//    {
+//        CheckBox item =((CheckBox)view);
+//        boolean v=item.isChecked();
+//        String option=item.getText().toString();
+//        if(v)
+//        {
+//            mylist.add(option);
+//        }
+//        else{
+//            mylist.remove(option);
+//        }
+//
+//    }
 
     public void onclickAddToCart(View view){
         CheckBox checkbox = (CheckBox) findViewById(R.id.icing);
@@ -65,10 +65,12 @@ public class chocolatecake extends AppCompatActivity {
            // String radio_text = radioButton.getText().toString();
            // product.setVolume(radio_text);
 
-            mylist.add(0,"Chocolate cake");
             Button b = (Button) findViewById(radioGroup.getCheckedRadioButtonId());
+            mylist.add("\n" + "Chocolate cake");
             mylist.add(b.getText().toString());
+            mylist.add(checkboxText);
             radioText = b.getText().toString();
+
 
             products.add(new Product("Chocolate Cake", radioText, checkboxText));
 
