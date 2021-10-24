@@ -73,7 +73,7 @@ public class donut extends AppCompatActivity {
             {
 
 
-                order.add("Donut");
+                order.add("\n"+ "Donut");
 
 
             Button b = (Button) findViewById(size.getCheckedRadioButtonId());

@@ -36,13 +36,13 @@ public class displayorders<d> extends AppCompatActivity {
         onLoad();
 
 
-//        SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
-//        order_list=file.getString("order","");
-//        display=(TextView) findViewById(R.id.order_screen);
-//        display.append(order_list);
-//        SharedPreferences.Editor info= file.edit();
-//        info.clear();
-//        info.commit();
+        SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
+        order_list=file.getString("order","");
+        display=(TextView) findViewById(R.id.order_screen);
+        display.append(order_list);
+        SharedPreferences.Editor info= file.edit();
+        info.clear();
+        info.commit();
 
 
     }
@@ -55,12 +55,6 @@ public class displayorders<d> extends AppCompatActivity {
             String str = product.getName() + "\n" + product.getVolume() + " " + product.getIcing();
             textView.setText(str);
         }
-
-
-
-
-
-
 
 }
 /*
