@@ -74,7 +74,8 @@ public class chocolatecake extends AppCompatActivity {
 
 
             products.add(new Product("Chocolate Cake", radioText, checkboxText));
-
+            Toast toast = Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_SHORT);
+            toast.show();
         }
 
     }

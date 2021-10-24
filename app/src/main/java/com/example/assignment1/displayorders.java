@@ -20,7 +20,7 @@ import java.io.FileOutputStream;
 import java.io.FileReader;
 import java.io.IOException;
 
-public class displayorders<d> extends AppCompatActivity {
+public class displayorders extends AppCompatActivity {
 
     TextView display;
     String order_list;
@@ -35,14 +35,15 @@ public class displayorders<d> extends AppCompatActivity {
         Intent intent=getIntent();
         onLoad();
 
+    display.append("\n");
 
-        SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
-        order_list=file.getString("order","");
-        display=(TextView) findViewById(R.id.order_screen);
-        display.append(order_list);
-        SharedPreferences.Editor info= file.edit();
-        info.clear();
-        info.commit();
+    SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
+    order_list=file.getString("order","");
+    display=(TextView) findViewById(R.id.order_screen);
+    display.append(order_list);
+  //  SharedPreferences.Editor info= file.edit();
+    //info.clear();
+    //info.commit();
 
 
     }
@@ -55,6 +56,12 @@ public class displayorders<d> extends AppCompatActivity {
             String str = product.getName() + "\n" + product.getVolume() + " " + product.getIcing();
             textView.setText(str);
         }
+
+
+
+
+
+
 
 }
 /*

@@ -72,6 +72,8 @@ public class spongecake extends AppCompatActivity {
             radioText = b.getText().toString();
 
             products.add(new Product("Sponge Cake", radioText, checkboxText));
+            Toast toast = Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_SHORT);
+            toast.show();
 
         }
 

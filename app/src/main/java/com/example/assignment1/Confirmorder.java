@@ -32,6 +32,10 @@ public class Confirmorder extends AppCompatActivity {
         edit.putString("order",s);
         edit.commit();
 
+   //     Product_order new_order=Product_order(s);
+
+    //    FileEditor.writeToFile(getApplicationContext(), );
+
 
     }
 

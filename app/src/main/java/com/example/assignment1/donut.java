@@ -95,7 +95,8 @@ public class donut extends AppCompatActivity {
                     toast.show();
                 }
 
-
+                Toast toast = Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_SHORT);
+                toast.show();
 
         }
     }
