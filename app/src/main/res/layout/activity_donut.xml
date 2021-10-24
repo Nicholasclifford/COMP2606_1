@@ -82,6 +82,7 @@
         android:id="@+id/switch1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         android:showText="true"
         android:text="@string/donutswitch"
         android:textOn="@string/switch_on" />
@@ -93,6 +94,14 @@
         android:layout_gravity="center_horizontal"
         android:onClick="send_order"
         android:text="@string/cart" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/confirm"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onclickConfirmOrder"/>
 
 
 </LinearLayout>

@@ -22,6 +22,7 @@ public class donut extends AppCompatActivity {
     ArrayList<String> donut_size;
     HashSet<String> donut_type;
     ArrayList<String> order = new ArrayList<String>();
+    ArrayList<Product> dountorder =new ArrayList<>();
 
 
 
@@ -82,7 +83,7 @@ public class donut extends AppCompatActivity {
 
                 String radioText = b.getText().toString();
                 String d=f.getText().toString();
-            Product product=new Product("donut",radioText,d);
+            Product products=new Product("donut",radioText,d);
 
             if(filling.isChecked())
             {
@@ -94,14 +95,22 @@ public class donut extends AppCompatActivity {
                     toast.show();
                 }
 
-             Intent intent2 = new Intent(this, Confirmorder.class);
-              intent2.putStringArrayListExtra("list", order);
-            startActivity(intent2);
+
 
         }
     }
 
 
+    public void onclickConfirmOrder(View view) {
 
+        for(Product product : ){
+            FileEditor.writeToFile(getApplicationContext(), product);
+        }
+
+        Intent intent2 = new Intent(this, Confirmorder.class);
+        intent2.putStringArrayListExtra("list", order);
+        startActivity(intent2);
+
+    }
 }
 

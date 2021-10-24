@@ -16,6 +16,7 @@ public class spongecake extends AppCompatActivity {
 
     RadioGroup type;
     ArrayList<String> mylist=new ArrayList<String>();
+    ArrayList<Product> spongecakeorder=new ArrayList<>();
 
 
     @Override
@@ -68,12 +69,24 @@ public class spongecake extends AppCompatActivity {
             radioText = b.getText().toString();
 
             Product product = new Product("Sponge Cake", radioText, checkboxText);
-            FileEditor.writeToFile(getApplicationContext(), product);
 
-            Intent intent = new Intent(this, Confirmorder.class);
-            intent.putStringArrayListExtra("list",mylist);
-            startActivity(intent);
+            spongecakeorder.add(new Product("Sponge Cake", radioText, checkboxText));
+
         }
+
+    }
+
+    public void onclickConfirmOrder(View view) {
+
+        for (Product product:spongecakeorder){
+            FileEditor.writeToFile(getApplicationContext(), product);
+        }
+
+
+        Intent intent = new Intent(this, Confirmorder.class);
+        intent.putStringArrayListExtra("list",mylist);
+        startActivity(intent);
+
 
     }
 

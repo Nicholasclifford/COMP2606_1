@@ -46,7 +46,8 @@ public class chocolatecake extends AppCompatActivity {
     public void onclickAddToCart(View view){
         CheckBox checkbox = (CheckBox) findViewById(R.id.icing);
         String checkboxText = "";
-        String radioText = "";
+        String radioText;
+
         boolean checked = checkbox.isChecked();
         if(checked){
             checkboxText = checkbox.getText().toString();
