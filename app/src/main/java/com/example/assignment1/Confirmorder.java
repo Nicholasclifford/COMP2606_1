@@ -54,8 +54,4 @@ public class Confirmorder extends AppCompatActivity {
 
     }
 
-    public void Home(View view) {
-        Intent intent3=new Intent(this,MainActivity.class);
-        startActivity(intent3);
-    }
 }

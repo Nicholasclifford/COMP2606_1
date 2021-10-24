@@ -33,13 +33,15 @@ public class displayorders extends AppCompatActivity {
         setContentView(R.layout.activity_displayorders);
 
         Intent intent=getIntent();
-        onLoad();
+//        onLoad();
 
-    display.append("\n");
+
+
 
     SharedPreferences file=getSharedPreferences("order_list", Context.MODE_PRIVATE);
     order_list=file.getString("order","");
     display=(TextView) findViewById(R.id.order_screen);
+    display.append("\n");
     display.append(order_list);
   //  SharedPreferences.Editor info= file.edit();
     //info.clear();
@@ -50,8 +52,7 @@ public class displayorders extends AppCompatActivity {
 
         public void onLoad(){
             Context context = getApplicationContext();
-            Product product = (Product) FileEditor.readObjectFromFile(getApplicationContext());
-
+          Product product = (Product) FileEditor.readObjectFromFile(getApplicationContext());
             TextView textView = (TextView) findViewById(R.id.order_screen);
             String str = product.getName() + "\n" + product.getVolume() + " " + product.getIcing();
             textView.setText(str);
