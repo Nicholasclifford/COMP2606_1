@@ -19,6 +19,7 @@ import java.util.Calendar;
 public class chocolatecake extends AppCompatActivity {
 
     ArrayList<String> mylist= new ArrayList<>();
+    ArrayList<Product> products = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -69,18 +70,23 @@ public class chocolatecake extends AppCompatActivity {
             mylist.add(b.getText().toString());
             radioText = b.getText().toString();
 
-            Product product = new Product("Chocolate Cake", radioText, checkboxText);
-            FileEditor.writeToFile(getApplicationContext(), product);
-
-            Intent intent = new Intent(this, Confirmorder.class);
-            intent.putStringArrayListExtra("list",mylist);
-            startActivity(intent);
+            products.add(new Product("Chocolate Cake", radioText, checkboxText));
 
         }
 
     }
 
     public void onclickConfirmOrder(View view){
+
+
+
+        for(Product product : products){
+            FileEditor.writeToFile(getApplicationContext(), product);
+        }
+
+        Intent intent = new Intent(this, Confirmorder.class);
+        intent.putStringArrayListExtra("list",mylist);
+        startActivity(intent);
 
     }
 }

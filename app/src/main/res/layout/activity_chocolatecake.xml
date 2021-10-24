@@ -53,4 +53,12 @@
         android:onClick="onclickAddToCart"
         android:text="@string/cart" />
 
+    <Button
+        android:id="@+id/confirm_order"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:onClick="onclickConfirmOrder"
+        android:text="@string/confirm" />
+
 </LinearLayout>

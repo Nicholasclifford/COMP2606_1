@@ -21,5 +21,6 @@
     <string name="donutswitch">Fill with Cream</string>
     <string name="switch_on">YES</string>
     <string name="back">Back to Home Srceen</string>
+    <string name="send_order">Send Order</string>
 
 </resources>
