@@ -103,7 +103,7 @@ public class donut extends AppCompatActivity {
 
     public void onclickConfirmOrder(View view) {
 
-        for(Product product : ){
+        for(Product product : dountorder){
             FileEditor.writeToFile(getApplicationContext(), product);
         }
 

@@ -15,6 +15,7 @@ import java.util.ArrayList;
 public class spongecake extends AppCompatActivity {
 
     RadioGroup type;
+    ArrayList<Product> products = new ArrayList<>();
     ArrayList<String> mylist=new ArrayList<String>();
     ArrayList<Product> spongecakeorder=new ArrayList<>();
 
@@ -27,20 +28,20 @@ public class spongecake extends AppCompatActivity {
         Intent intent=getIntent();
     }
 
-    public void onCheckboxClicked(View view)
-    {
-        CheckBox item =((CheckBox)view);
-        boolean v=item.isChecked();
-        String option=item.getText().toString();
-        if(v)
-        {
-            mylist.add(option);
-        }
-        else{
-            mylist.remove(option);
-        }
-
-    }
+//    public void onCheckboxClicked(View view)
+//    {
+//        CheckBox item =((CheckBox)view);
+//        boolean v=item.isChecked();
+//        String option=item.getText().toString();
+//        if(v)
+//        {
+//            mylist.add(option);
+//        }
+//        else{
+//            mylist.remove(option);
+//        }
+//
+//    }
 
     public void onclickAddToCart(View view)
     {
@@ -63,22 +64,24 @@ public class spongecake extends AppCompatActivity {
         }
         else
         {
-            mylist.add(0,"Sponge cake");
+            //mylist.add(0,"Sponge cake");
             Button b = (Button) findViewById(type.getCheckedRadioButtonId());
+            mylist.add("\n" + "Sponge cake");
             mylist.add(b.getText().toString());
+            mylist.add(checkboxText);
             radioText = b.getText().toString();
 
-            Product product = new Product("Sponge Cake", radioText, checkboxText);
-
-            spongecakeorder.add(new Product("Sponge Cake", radioText, checkboxText));
+            products.add(new Product("Sponge Cake", radioText, checkboxText));
 
         }
 
     }
 
+
+
     public void onclickConfirmOrder(View view) {
 
-        for (Product product:spongecakeorder){
+        for (Product product:products){
             FileEditor.writeToFile(getApplicationContext(), product);
         }
 
@@ -87,10 +90,6 @@ public class spongecake extends AppCompatActivity {
         intent.putStringArrayListExtra("list",mylist);
         startActivity(intent);
 
-
-    }
-
-    public void onclickConfirmOrder(){
 
     }
 }

@@ -15,6 +15,8 @@ public class Product implements Serializable {
 
     private String name;
     private String volume;
+    private String type;
+    private String fill_with_cream;
 
 
     private String icing;
@@ -24,6 +26,13 @@ public class Product implements Serializable {
         this.name = name;
         this.volume = volume;
         this.icing = icing;
+    }
+
+    public Product(String name, String volume, String type, String fill_with_cream) {
+        this.name = name;
+        this.volume = volume;
+        this.type = type;
+        this.fill_with_cream = fill_with_cream;
     }
 
     public String getName() {
