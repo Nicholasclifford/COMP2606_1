@@ -83,9 +83,9 @@ public class spongecake extends AppCompatActivity {
 
     public void onclickConfirmOrder(View view) {
 
-        for (Product product:products){
-            FileEditor.writeToFile(getApplicationContext(), product);
-        }
+//        for (Product product:products){
+//            FileEditor.writeToFile(getApplicationContext(), product);
+//        }
 
 
         Intent intent = new Intent(this, Confirmorder.class);

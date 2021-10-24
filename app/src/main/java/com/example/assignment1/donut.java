@@ -83,7 +83,7 @@ public class donut extends AppCompatActivity {
 
                 String radioText = b.getText().toString();
                 String d=f.getText().toString();
-            Product products=new Product("donut",radioText,d);
+            //Product products=new Product("donut",radioText,d);
 
             if(filling.isChecked())
             {
@@ -104,9 +104,9 @@ public class donut extends AppCompatActivity {
 
     public void onclickConfirmOrder(View view) {
 
-        for(Product product : dountorder){
-            FileEditor.writeToFile(getApplicationContext(), product);
-        }
+//        for(Product product : dountorder){
+//            FileEditor.writeToFile(getApplicationContext(), product);
+//        }
 
         Intent intent2 = new Intent(this, Confirmorder.class);
         intent2.putStringArrayListExtra("list", order);

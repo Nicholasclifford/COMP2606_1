@@ -73,7 +73,7 @@ public class chocolatecake extends AppCompatActivity {
             radioText = b.getText().toString();
 
 
-            products.add(new Product("Chocolate Cake", radioText, checkboxText));
+            //products.add(new Product("Chocolate Cake", radioText, checkboxText));
             Toast toast = Toast.makeText(getApplicationContext(), "Item added", Toast.LENGTH_SHORT);
             toast.show();
         }
@@ -84,9 +84,9 @@ public class chocolatecake extends AppCompatActivity {
 
 
 
-        for(Product product : products){
-            FileEditor.writeToFile(getApplicationContext(), product);
-        }
+//        for(Product product : products){
+//            FileEditor.writeToFile(getApplicationContext(), product);
+//        }
 
         Intent intent = new Intent(this, Confirmorder.class);
         intent.putStringArrayListExtra("list",mylist);
