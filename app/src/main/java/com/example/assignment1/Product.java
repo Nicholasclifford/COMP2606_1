@@ -15,6 +15,8 @@ public class Product implements Serializable {
 
     private String name;
     private String volume;
+
+
     private String icing;
     ArrayList<String> additions;
 
@@ -47,6 +49,8 @@ public class Product implements Serializable {
     public String isIcing() {
         return icing;
     }
+
+    public String getIcing() { return icing; }
 
     public ArrayList<String> getAdditions() {
         return additions;

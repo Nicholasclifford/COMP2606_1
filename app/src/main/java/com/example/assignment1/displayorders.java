@@ -52,8 +52,8 @@ public class displayorders<d> extends AppCompatActivity {
             Product product = (Product) FileEditor.readObjectFromFile(getApplicationContext());
 
             TextView textView = (TextView) findViewById(R.id.order_screen);
-
-            textView.setText(product.getVolume());
+            String str = product.getName() + "\n" + product.getVolume() + " " + product.getIcing();
+            textView.setText(str);
         }
 
 
